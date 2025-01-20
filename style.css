@@ -84,6 +84,55 @@ header{
 }
 
 /* hero section related style */
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.hero-contant{
+    width: calc(60% - 50px);
+}
+
+.hero-contant .heading{
+    color: #111111;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.hero-contant .heading .orange{
+    color: #FEA301;
+}
+.hero-contant .heading .sky-blue{
+    color: #01ACFD;
+}
+
+.desc{
+    color: #111111;
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 24px;
+}
+
+.hero-btn{
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-color: #111111;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 48px;
+}
+
+.hero-img{
+    width: 40%;
+}
+
+.hero-img img{
+    width: 100%;
+}
 
 /* curriculum section related style */
 
@@ -111,5 +160,36 @@ header{
     .logo-img{
         width: 46px;
         height: 46px;
+    }
+
+    #hero{
+        flex-direction: column-reverse;;
+        text-align: center;
+        margin: 16px;
+        gap: 0;
+        margin-bottom: 50px;
+    }
+
+    .hero-contant{
+        width: 100%;
+    }
+
+    .hero-contant .heading{
+        font-size: 2rem;
+        margin-bottom: 18px;
+    }
+    .desc{
+        font-size: 0.9rem;
+        margin-bottom: 18px;
+    }
+
+    .hero-img{
+        width: 100%;
+        margin: 20px 10px;
+    }
+
+    .hero-btn{
+        font-size: 1rem;
+        padding: 10px 24px;
     }
 }
