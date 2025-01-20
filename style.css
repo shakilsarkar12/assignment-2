@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", serif;
+}
+
+/* shared style */
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+body,
+footer{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+header,
+main{
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+/* header section related style */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px auto;
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-img{
+    width: 62px;
+    height: 62px;
+}
+
+.logo-name{
+    color: #111111;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#menu-icon{
+    display: none;
+    font-size: 25px;
+    color: #111111;
+}
+
+.nav-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.nav-link a{
+    color: var(--text-color);
+    font-size: 1.25rem;
+    font-weight: var(--font-weight);
+}
+
+.contact-btn{
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    background-color: #FEA301;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 60px;
+}
+
+/* hero section related style */
+
+/* curriculum section related style */
+
+/* stories section related style*/
+
+/* footer section related style */
+
+/* media query for mobile device */
+
+@media screen and (max-width: 576px) {
+    .nav-list,
+    .contact-btn,
+    .logo-name{
+        display: none;
+    }
+
+    header{
+        margin: 20px 16px;
+    }
+
+    #menu-icon{
+        display: block;
+    }
+
+    .logo-img{
+        width: 46px;
+        height: 46px;
+    }
+}
