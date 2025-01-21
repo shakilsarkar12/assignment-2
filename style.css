@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     margin: 0;
@@ -81,6 +82,11 @@ section {
     border: none;
     border-radius: 12px;
     padding: 10px 60px;
+    transition: .5s ease-in-out;
+}
+
+.contact-btn:hover {
+    background: #111111;
 }
 
 /* hero section related style */
@@ -117,7 +123,8 @@ section {
     margin-bottom: 24px;
 }
 
-.hero-btn {
+.hero-btn,
+.storie-btn {
     color: #fff;
     font-size: 1.25rem;
     font-weight: 700;
@@ -125,6 +132,12 @@ section {
     border: none;
     border-radius: 12px;
     padding: 10px 48px;
+    transition: .5s ease-in-out;
+}
+
+.hero-btn:hover,
+.storie-btn:hover {
+    background: #FEA301;
 }
 
 .hero-img {
@@ -143,10 +156,10 @@ section {
     background-size: cover;
     max-width: 1640px;
     height: 880px;
-    margin-bottom: 500px;
+    margin-bottom: 30px;
 }
 
-#curriculam .heading {
+.heading {
     color: #000;
     font-size: 2.9rem;
     font-weight: 700;
@@ -230,25 +243,134 @@ section {
     gap: 15px;
 }
 
-#curriculam .pagination div {
+#curriculam .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    position: relative;
+}
+
+#curriculam .pagination .arrow {
     color: #fff;
-    font-size: 3rem;
+    height: 60px;
+    width: 60px;
+    font-size: 2.5rem;
     background-color: #FEA301;
+    align-content: center;
+    align-self: center;
     border-radius: 50%;
-    padding: 6px 10px;
+    transition: .5s ease-in-out;
+}
+
+#curriculam .pagination .arrow:hover {
+    background: #ba8221;
+    color: #01ACFD;
+    transform: translateX(var(--transform));
 }
 
 /* stories section related style*/
+#stories {
+    max-width: 1440px;
+    background: url(assets/bg.png), linear-gradient(0.00deg, rgba(254, 163, 1, 0.3), rgba(255, 255, 255, 0.3) 100%);
+    padding-bottom: 50px;
+}
+
+.story-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+.story-card {
+    background: #fff;
+    width: 300px;
+    height: 310px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+
+.storie-img {
+    width: 100%;
+    height: 55%;
+    position: relative;
+}
+
+.storie-img .date{
+    position: absolute;
+    left: 38px;
+    bottom: 0;
+    transform: translateY(50%);
+    font-family: Raleway;
+    font-size: .8rem;
+    color: #fff;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 40px;
+    background: var(--color);
+}
+
+.storie-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.story-card .storie-title {
+    font-size: 1rem;
+    margin: 38px 0 0 38px;
+    line-height: 30px;
+}
+
+.story-card .desc {
+    color: #666666;
+    font-size: 0.98rem;
+    font-weight: 500;
+    margin-left: 35px;
+    line-height: 30px;
+}
+
+
+#storie-card-1 {
+    grid-column: span 2;
+    grid-row: span 2;
+    width: 540px;
+    height: 640px;
+}
+
+#storie-card-1 .storie-title {
+    font-size: 1.25rem;
+    margin: 55px 35px;
+}
+
+.btn-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+/* hide card */
+.hide-card{
+    display: none;
+}
+
 
 /* footer section related style */
 
 /* media query for mobile device */
-
 @media screen and (max-width: 576px) {
 
     .nav-list,
     .contact-btn,
     .logo-name,
+    #storie-card-1,
     #curriculam .pagination {
         display: none;
     }
@@ -268,7 +390,6 @@ section {
 
     #hero {
         flex-direction: column-reverse;
-        ;
         text-align: center;
         margin: 10px;
         gap: 0;
@@ -293,16 +414,21 @@ section {
         margin: 20px 10px;
     }
 
-    .hero-btn {
+    .hero-btn,
+    .storie-btn {
         font-size: 1rem;
         padding: 10px 24px;
     }
 
     #curriculam {
+        background-image: url(assets/bg.png);
+        background-position: left -300px top -50px;
+        background-size: cover;
         margin: 10px;
+        height: auto;
     }
 
-    #curriculam .heading{
+    #curriculam .heading {
         font-size: 1.5rem;
         margin: 60px;
         padding-top: 0;
@@ -313,37 +439,69 @@ section {
         gap: 10px;
     }
 
-    #curriculam .card-container .card{
+    #curriculam .card-container .card {
         width: calc(100% - 32px);
         height: 100%;
         padding: 30px;
     }
 
-    #curriculam .card-image{
+    #curriculam .card-image {
         width: 100px;
         height: 100px;
         margin: 0 auto;
     }
 
-    #curriculam .title{
+    #curriculam .title {
         font-size: 1.01rem;
         margin: 20px;
     }
 
-    #curriculam .desc{
+    #curriculam .desc {
         font-size: 0.89rem;
     }
 
-    #curriculam .read-more{
+    #curriculam .read-more {
         font-size: 0.8rem;
         bottom: 20px;
     }
 
-    #curriculam .card-image img{
+    #curriculam .card-image img {
         width: 100%;
     }
 
     #curriculam .card-container .card:nth-child(3) {
         margin-bottom: 30px;
+    }
+
+    .story-container {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 10px;
+        gap: 10px;
+    }
+
+    .story-card {
+        width: auto;
+        max-height: 200px;
+    }
+
+    .storie-img .date{
+        left: 10px;
+        font-size: .6rem;
+        font-weight: 500;
+        padding: 7px 12px;
+    }    
+
+    .hide-card{
+        display: block;
+    }
+
+    .story-card .storie-title {
+        font-size: .65rem;
+        margin: 24px 0 0 10px;
+        line-height: 18px;
+    }
+
+    .btn-box {
+        margin-top: 30px;
     }
 }
