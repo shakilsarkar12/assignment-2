@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,72 +8,72 @@
 }
 
 /* shared style */
-li{
+li {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
     color: black;
 }
 
 body,
-footer{
+footer {
     max-width: 1440px;
     margin: 0 auto;
 }
 
 header,
-main{
+section {
     max-width: 1160px;
     margin: 0 auto;
 }
 
 /* header section related style */
-header{
+#header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 20px auto;
 }
 
-.logo-container{
+.logo-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.logo-img{
+.logo-img {
     width: 62px;
     height: 62px;
 }
 
-.logo-name{
+.logo-name {
     color: #111111;
     font-size: 2rem;
     font-weight: 700;
 }
 
-#menu-icon{
+#menu-icon {
     display: none;
     font-size: 25px;
     color: #111111;
 }
 
-.nav-list{
+.nav-list {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 32px;
 }
 
-.nav-link a{
+.nav-link a {
     color: var(--text-color);
     font-size: 1.25rem;
     font-weight: var(--font-weight);
 }
 
-.contact-btn{
+.contact-btn {
     color: #fff;
     font-size: 1.25rem;
     font-weight: 600;
@@ -84,39 +84,40 @@ header{
 }
 
 /* hero section related style */
-#hero{
+#hero {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 50px;
 }
 
-.hero-contant{
+.hero-contant {
     width: calc(60% - 50px);
 }
 
-.hero-contant .heading{
+.hero-contant .heading {
     color: #111111;
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 24px;
 }
 
-.hero-contant .heading .orange{
+.hero-contant .heading .orange {
     color: #FEA301;
 }
-.hero-contant .heading .sky-blue{
+
+.hero-contant .heading .sky-blue {
     color: #01ACFD;
 }
 
-.desc{
+#hero .desc {
     color: #111111;
     font-size: 1.25rem;
     font-weight: 400;
     margin-bottom: 24px;
 }
 
-.hero-btn{
+.hero-btn {
     color: #fff;
     font-size: 1.25rem;
     font-weight: 700;
@@ -126,15 +127,116 @@ header{
     padding: 10px 48px;
 }
 
-.hero-img{
+.hero-img {
     width: 40%;
 }
 
-.hero-img img{
+.hero-img img {
     width: 100%;
 }
 
 /* curriculum section related style */
+#curriculam {
+    background-image: url(assets/bg.png);
+    background-position: left -165px top 25px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 1640px;
+    height: 880px;
+    margin-bottom: 500px;
+}
+
+#curriculam .heading {
+    color: #000;
+    font-size: 2.9rem;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 60px;
+    margin-bottom: 80px;
+}
+
+#curriculam .card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1440px;
+    margin-top: -20px;
+}
+
+#curriculam .card-container .card {
+    text-align: center;
+    padding: 50px 40px;
+    width: 370px;
+    height: 475px;
+    border-radius: 16px;
+    box-shadow: inset 0px 0px 28.3px 0.94px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+#curriculam .card-container .card:nth-child(1) {
+    box-sizing: border-box;
+    border: 1px solid rgb(222, 245, 255);
+    background: linear-gradient(180.00deg, rgb(222, 245, 255), rgba(255, 255, 255, 0) 40%), rgb(255, 255, 255);
+}
+
+#curriculam .card-container .card:nth-child(2) {
+    box-sizing: border-box;
+    border: 1px solid rgb(255, 244, 220);
+    background: linear-gradient(180.00deg, rgb(255, 244, 220), rgba(255, 255, 255, 0) 40%), rgb(255, 255, 255);
+}
+
+#curriculam .card-container .card:nth-child(3) {
+    box-sizing: border-box;
+    border: 1px solid rgb(242, 232, 255);
+    background: linear-gradient(180.00deg, rgb(238, 225, 255), rgba(255, 255, 255, 0) 40%), rgb(255, 255, 255);
+}
+
+#curriculam .card-image {
+    width: 100%;
+    height: 140px;
+}
+
+#curriculam .title {
+    color: #202020;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 30px 0;
+}
+
+#curriculam .desc {
+    color: #808080;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+#curriculam .read-more {
+    position: absolute;
+    text-align: center;
+    transform: translateX(-50%);
+    bottom: 40px;
+    color: var(--text-color);
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+#curriculam .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    text-align: center;
+    gap: 15px;
+}
+
+#curriculam .pagination div {
+    color: #fff;
+    font-size: 3rem;
+    background-color: #FEA301;
+    border-radius: 50%;
+    padding: 6px 10px;
+}
 
 /* stories section related style*/
 
@@ -143,53 +245,105 @@ header{
 /* media query for mobile device */
 
 @media screen and (max-width: 576px) {
+
     .nav-list,
     .contact-btn,
-    .logo-name{
+    .logo-name,
+    #curriculam .pagination {
         display: none;
     }
 
-    header{
+    header {
         margin: 20px 16px;
     }
 
-    #menu-icon{
+    #menu-icon {
         display: block;
     }
 
-    .logo-img{
+    .logo-img {
         width: 46px;
         height: 46px;
     }
 
-    #hero{
-        flex-direction: column-reverse;;
+    #hero {
+        flex-direction: column-reverse;
+        ;
         text-align: center;
-        margin: 16px;
+        margin: 10px;
         gap: 0;
-        margin-bottom: 50px;
     }
 
-    .hero-contant{
+    .hero-contant {
         width: 100%;
     }
 
-    .hero-contant .heading{
+    .hero-contant .heading {
         font-size: 2rem;
         margin-bottom: 18px;
     }
-    .desc{
+
+    #hero .desc {
         font-size: 0.9rem;
         margin-bottom: 18px;
     }
 
-    .hero-img{
+    .hero-img {
         width: 100%;
         margin: 20px 10px;
     }
 
-    .hero-btn{
+    .hero-btn {
         font-size: 1rem;
         padding: 10px 24px;
+    }
+
+    #curriculam {
+        margin: 10px;
+    }
+
+    #curriculam .heading{
+        font-size: 1.5rem;
+        margin: 60px;
+        padding-top: 0;
+    }
+
+    #curriculam .card-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #curriculam .card-container .card{
+        width: calc(100% - 32px);
+        height: 100%;
+        padding: 30px;
+    }
+
+    #curriculam .card-image{
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+    }
+
+    #curriculam .title{
+        font-size: 1.01rem;
+        margin: 20px;
+    }
+
+    #curriculam .desc{
+        font-size: 0.89rem;
+    }
+
+    #curriculam .read-more{
+        font-size: 0.8rem;
+        bottom: 20px;
+    }
+
+    #curriculam .card-image img{
+        width: 100%;
+    }
+
+    #curriculam .card-container .card:nth-child(3) {
+        margin-bottom: 30px;
     }
 }
