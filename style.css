@@ -436,6 +436,15 @@ footer {
     gap: 10px;
 }
 
+.social-link a{
+    transition: .3s ease-out;
+}
+
+.social-link a:hover{
+    transform: translateY(-2px);
+    scale: 1.1;
+}
+
 /* media query for mobile device */
 @media screen and (max-width: 576px) {
 
